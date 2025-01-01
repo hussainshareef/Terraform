@@ -4,4 +4,4 @@ backend "azurerm" {
     container_name       = "tfstate-shareef"
     key                  = "terraform.tfstate"
   }
-}
+
