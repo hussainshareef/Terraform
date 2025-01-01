@@ -29,10 +29,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-
+          creds: ${{ secrets.AZURE_GITHUB }}
       - name: Authenticate to Azure
         run: |
           az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
